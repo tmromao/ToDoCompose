@@ -18,7 +18,7 @@ class SharedViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _allTasks = MutableStateFlow<List<ToDoTask>>(emptyList())
-    val allTasks : StateFlow<ToDoTask> = _allTasks
+    val allTasks : StateFlow<List<ToDoTask>> = _allTasks
 
     fun getAllTasks() {
         viewModelScope.launch {

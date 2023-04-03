@@ -4,7 +4,7 @@ import androidx.compose.material.Text
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navArgument
+import androidx.navigation.navArgument
 import com.example.todocompose.utils.Action
 import com.example.todocompose.utils.Constants
 

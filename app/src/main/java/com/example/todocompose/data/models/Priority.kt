@@ -1,6 +1,6 @@
 package com.example.todocompose.data.models
 
-import android.graphics.Color
+import androidx.compose.ui.graphics.Color
 import com.example.todocompose.ui.theme.highPriorityColor
 import com.example.todocompose.ui.theme.lowPriorityColor
 import com.example.todocompose.ui.theme.mediumPriorityColor
