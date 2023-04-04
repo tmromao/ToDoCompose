@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ToDoCompose</string>
     <string name="add_button">Add button</string>
+    <string name="search_button">Search task</string>
+    <string name="sort_action">Sort</string>
+    <string name="delete_all_action">Delete all</string>
+
 </resources>
