@@ -20,23 +20,29 @@ import androidx.compose.ui.unit.dp
 import com.example.todocompose.data.models.Priority
 import com.example.todocompose.data.models.ToDoTask
 import com.example.todocompose.ui.theme.*
+import com.example.todocompose.utils.RequestState
 
 @Composable
 fun ListContent(
-    tasks: List<ToDoTask>,
+    tasks: RequestState<List<ToDoTask>>,
     navigateToTaskScreen: (taskId: Int) -> Unit,
 ) {
 
-    if (tasks.isEmpty()) {
-        EmptyContent()
-    } else {
-        DisplayTasks(
-            tasks,
-            navigateToTaskScreen
-        )
+    if (tasks is RequestState.Success) {
+        if (tasks.data.isNotEmpty()) {
+            DisplayTasks(tasks.data, navigateToTaskScreen)
+        } else {
+            EmptyContent()
+        }
     }
 }
 
+// Path: app/src/main/java/com/example/todocompose/ui/screens/list/ListContent.kt
+// Type: com.example.todocompose.ui.screens.list.ListContent
+// Language: kotlin
+// Package: com.example.todocompose.ui.screens.list
+// Module: app
+// Project: ToDoCompose
 @Composable
 fun DisplayTasks(
     tasks: List<ToDoTask>,
